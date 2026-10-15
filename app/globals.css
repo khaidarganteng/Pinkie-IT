@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body {
+  @apply font-body font-semibold text-kitty-ink antialiased;
+  background:
+    radial-gradient(circle at 1px 1px, #ffc2da 1.4px, transparent 1.6px) 0 0 / 28px 28px,
+    linear-gradient(180deg, #fff7fb, #ffeaf3 60%, #fff7fb);
+  background-attachment: fixed;
+}
+h1, h2, h3, h4 { @apply font-display font-semibold; }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold transition duration-200 active:translate-y-0.5; }
+  .btn-pink { @apply bg-kitty-500 text-white shadow-pop hover:bg-kitty-600 hover:-translate-y-0.5; }
+  .btn-soft { @apply bg-white text-kitty-600 border-2 border-kitty-200 hover:bg-kitty-100; }
+  .card { @apply rounded-[28px] bg-white border-2 border-white shadow-soft; }
+  .section { @apply mx-auto max-w-6xl px-5 py-20; }
+  .eyebrow { @apply inline-block rounded-full bg-kitty-100 border-2 border-kitty-200 px-4 py-1 text-sm font-bold text-kitty-600; }
+  .field { @apply w-full rounded-2xl border-2 border-kitty-200 bg-kitty-50 px-4 py-3 outline-none transition focus:border-kitty-400 focus:bg-white focus:ring-4 focus:ring-kitty-200/50; }
+}
